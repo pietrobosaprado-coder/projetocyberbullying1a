@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberbullying: Nossa Escola Contra o Ódio</title>
+    <style>
+        /* Paleta de Cores e Fontes */
+        :root {
+            --branco: #ffffff;
+            --cinza-claro: #f4f4f9;
+            --vermelho: #d90429;
+            --vermelho-escuro: #ef233c;
+            --azul-raro: #003049; /* Usado raramente, como pedido */
+            --texto: #2b2b2b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--branco);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animar {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--vermelho);
+            color: var(--branco);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-bottom: 5px solid var(--azul-raro);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Seções Gerais */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            color: var(--vermelho);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--vermelho);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Grid de Cards (Causas e Consequências) */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--cinza-claro);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--vermelho);
+            box-shadow: 0 10px 15px rgba(217, 4, 41, 0.2);
+        }
+
+        .card .emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            color: var(--vermelho-escuro);
+            margin-bottom: 1rem;
+        }
+
+        /* Como é feito */
+        .como-ocorre {
+            background-color: var(--cinza-claro);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-left: 8px solid var(--vermelho);
+        }
+
+        /* Soluções e Combate */
+        .solucoes-lista {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .solucoes-lista li {
+            background-color: var(--branco);
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            transition: transform 0.2s;
+        }
+
+        .solucoes-lista li:hover {
+            transform: scale(1.02);
+            border-color: var(--vermelho);
+        }
+
+        .solucoes-lista li .emoji {
+            font-size: 2rem;
+            margin-right: 1.5rem;
+        }
+
+        /* Interatividade - Botão de Ajuda */
+        .btn-ajuda {
+            display: inline-block;
+            background-color: var(--vermelho);
+            color: var(--branco);
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: background-color 0.3s, transform 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Aqui o azul raro aparece! */
+        .btn-ajuda:hover {
+            background-color: var(--azul-raro); 
+            transform: scale(1.05);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--vermelho);
+            color: var(--branco);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="animar">
+        <h1>🛑 Cyberbullying: O Desafio dos 1.500</h1>
+        <p>Somos 1.500 alunos no nosso colégio. São 1.500 mentes brilhantes, 1.500 histórias. A internet nos conecta, mas também pode ser usada como arma. Vamos entender e combater o Cyberbullying juntos!</p>
+    </header>
+
+    <section id="o-que-e" class="animar">
+        <h2>O que é e Como é Feito? 📱💻</h2>
+        <div class="como-ocorre">
+            <p><strong>Cyberbullying</strong> é o uso da tecnologia (redes sociais, aplicativos de mensagens, jogos online) para assediar, ameaçar, humilhar ou envergonhar alguém.</p>
+            <br>
+            <p><strong>Como fazem isso? 🕵️‍♂️</strong><br>
+            Criação de perfis falsos (fakes), vazamento de fotos íntimas ou constrangedoras, exclusão proposital de grupos escolares no WhatsApp, comentários de ódio em fotos do Instagram ou TikTok, e espalhar boatos virtuais.</p>
+        </div>
+    </section>
+
+    <section id="causas" class="animar">
+        <h2>Causas: Por que acontece? 🤔</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <div class="emoji">🎭</div>
+                <h3>Falsa Sensação de Anonimato</h3>
+                <p>Atrás de uma tela, o agressor sente que não será descoberto e perde o freio social, achando que a internet é uma "terra sem lei".</p>
+            </div>
+            <div class="card">
+                <div class="emoji">👑</div>
+                <h3>Busca por Popularidade</h3>
+                <p>Numa escola enorme, alguns tentam ganhar status e aprovação dos colegas diminuindo os outros publicamente.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">💔</div>
+                <h3>Falta de Empatia</h3>
+                <p>A distância física impede que o agressor veja a dor imediata no rosto da vítima, facilitando a crueldade.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="consequencias" class="animar">
+        <h2>Consequências: O Impacto Real 🌩️</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <div class="emoji">📉</div>
+                <h3>Queda nas Notas</h3>
+                <p>A escola passa de um lugar de aprendizado para uma zona de terror, destruindo a concentração e o desempenho acadêmico.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">😔</div>
+                <h3>Danos Psicológicos</h3>
+                <p>Gera crises crônicas de ansiedade, depressão profunda, perda de autoestima e, em casos graves, pensamentos autodestrutivos.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🚪</div>
+                <h3>Isolamento Social</h3>
+                <p>A vítima se exclui dos grupos escolares, apaga suas redes sociais e sente que os 1.500 alunos da escola estão contra ela.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="combate" class="animar">
+        <h2>Como Combater na Nossa Escola 🛡️</h2>
+        <ul class="solucoes-lista">
+            <li>
+                <span class="emoji">🚫</span>
+                <div>
+                    <strong>Não alimente o troll:</strong> Não responda às provocações. Bloqueie os perfis imediatamente em todas as redes sociais.
+                </div>
+            </li>
+            <li>
+                <span class="emoji">📸</span>
+                <div>
+                    <strong>Guarde as provas:</strong> Tire prints de tudo (mensagens, fotos, ameaças). Isso é fundamental para denúncias.
+                </div>
+            </li>
+            <li>
+                <span class="emoji">🗣️</span>
+                <div>
+                    <strong>Quebre o silêncio:</strong> Fale com professores, coordenadores ou seus pais. O colégio não pode ajudar se não souber o que acontece.
+                </div>
+            </li>
+            <li>
+                <span class="emoji">🤝</span>
+                <div>
+                    <strong>Seja a rede de apoio:</strong> Viu alguém sofrendo bullying? Não ria, não compartilhe. Chame a vítima no privado e ofereça apoio.
+                </div>
+            </li>
+        </ul>
+        
+        <div style="text-align: center;">
+            <button class="btn-ajuda" onclick="alert('Lembre-se: O canal de denúncias da coordenação é anônimo. Você não está sozinho! Ligue 188 (CVV) se precisar de apoio emocional urgente.')">Precisa de Ajuda? Clique Aqui 🚨</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido para o projeto escolar ❤️🤍💙 | Juntos, somos mais fortes que o cyberbullying!</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.animation = 'fadeIn 1s ease-out forwards';
+                }
+            });
+        });
+
+        document.querySelectorAll('.animar').forEach((el) => {
+            el.style.opacity = 0; // Esconde inicialmente
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
